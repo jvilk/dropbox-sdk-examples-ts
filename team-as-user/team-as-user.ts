@@ -1,11 +1,11 @@
-function listFiles() {
+function listFilesTeam() {
   var ACCESS_TOKEN = (<HTMLInputElement> document.getElementById('access-token')).value;
   var USER_ID = (<HTMLInputElement> document.getElementById('user-id')).value;
   var dbxTeam = new DropboxTeam({ accessToken: ACCESS_TOKEN });
   var dbx = dbxTeam.actAsUser(USER_ID);
   dbx.filesListFolder({path: ''})
     .then(function(response) {
-      displayFiles(response.entries);
+      displayFilesTeam(response.entries);
       console.log(response);
     })
     .catch(function(error) {
@@ -14,7 +14,7 @@ function listFiles() {
   return false;
 }
 
-function displayFiles(files: DropboxTypes.files.Metadata[]) {
+function displayFilesTeam(files: DropboxTypes.files.Metadata[]) {
   var filesList = document.getElementById('files');
   var li: HTMLLIElement;
   for (var i = 0; i < files.length; i++) {

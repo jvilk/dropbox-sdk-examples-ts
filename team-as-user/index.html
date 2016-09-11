@@ -28,7 +28,7 @@
   <section class="container main">
     <p>This example shows how to use the DropboxTeam class and the <code>DropboxTeam.actAsUser()</code> [<a href="http://dropbox.github.io/dropbox-sdk-js/DropboxTeam.html#actAsUser">docs</a>] method, to retreive a Dropbox class that is acting as a specific user on the team.</p>
 
-    <form onSubmit="return listFiles()">
+    <form onSubmit="return listFilesTeam()">
       <input type="text" id="access-token" placeholder="Access token" />
       <input type="text" id="user-id" placeholder="User id" />
       <button type="submit">Submit</button>
@@ -41,32 +41,6 @@
   </section>
 
   <!-- Scripts to run example -->
-  <script>
-    function listFiles() {
-      var ACCESS_TOKEN = document.getElementById('access-token').value;
-      var USER_ID = document.getElementById('user-id').value;
-      var dbxTeam = new DropboxTeam({ accessToken: ACCESS_TOKEN });
-      var dbx = dbxTeam.actAsUser(USER_ID);
-      dbx.filesListFolder({path: ''})
-        .then(function(response) {
-          displayFiles(response.entries);
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.error(error);
-        });
-      return false;
-    }
-
-    function displayFiles(files) {
-      var filesList = document.getElementById('files');
-      var li;
-      for (var i = 0; i < files.length; i++) {
-        li = document.createElement('li');
-        li.appendChild(document.createTextNode(files[i].name));
-        filesList.appendChild(li);
-      }
-    }
-  </script>
+  <script src="team-as-user.js"></script>
 </body>
 </html>
