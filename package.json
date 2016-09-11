@@ -1,0 +1,18 @@
+{
+  "name": "dropbox-ts-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dropbox": "git://github.com/jvilk/dropbox-sdk-js.git#6bf66b0af6a85ecb781c9b6efa0c30a0a460e320"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.38",
+    "typescript": "^2.0.2"
+  }
+}
