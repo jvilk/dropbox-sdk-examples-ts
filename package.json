@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "dropbox": "git://github.com/jvilk/dropbox-sdk-js.git#3aaecb1d0c4fbad6f56108e8f10a588bbd7528dc"
+    "dropbox": "git://github.com/jvilk/dropbox-sdk-js.git#4aa5c22ac89ae7c7cce345de9ff21c6405ef6a97"
   },
   "devDependencies": {
     "@types/node": "^6.0.38",
